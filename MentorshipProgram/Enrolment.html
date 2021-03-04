@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body style="padding-top:20px">
+    <div class="col-md-10 col-md-offset-1">
+        <div class="well">
+
+            <div class="well">
+                <label>Join our Mentorship programme</label>
+                <a class="btn btn-success pull-right" href="Login.html">Back</a>
+            </div>
+
+            <div class="form-group">
+                <label for="txtFName">First Name</label>
+                <input type="text" class="form-control" id="txtFName" aria-describedby="" placeholder="Enter First Name">
+            </div>
+
+            <div class="form-group">
+                <label for="txtLName">Last Name</label>
+                <input type="text" class="form-control" id="txtLName" aria-describedby="" placeholder="Enter Last Name">
+            </div>
+
+            <div class="form-group">
+                <label for="txtGender">Gender</label>
+                <select class="form-control" id="txtGender">
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="txtAge">Age</label>
+                <input type="text" class="form-control" id="txtAge" aria-describedby="" placeholder="Enter Age">
+            </div>
+
+            <div class="form-group">
+                <label for="txtLName">Mentorship Focus</label>
+                <input type="text" class="form-control" id="txtMentorship" aria-describedby="" placeholder="Enter Mentorship Focus">
+            </div>
+
+        
+                <tr class="success">
+                    <td colspan="2">
+                        <input id="btnEnrol" class="btn btn-success" type="button" value="Enrol" />
+                    </td>
+                </tr>
+
+
+            <div class="modal fade" tabindex="-1" id="successModal" data-keyboard="false" data-backdrop="static">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">
+                                &times;
+                            </button>
+                            <h4>Success</h4>
+                        </div>
+                        <div class="modal-body">
+                            <h2>Enrolment Successful</h2>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" data-dismiss="modal" class="btn btn-success">
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="divError" class="alert alert-danger collapse">
+                <a id="linkClose" class="close" href="#">&times;</a>
+                <div id="divErrorText"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#linkClose').click(function () {
+                $('#divError').hide('fade');
+            });
+            $('#btnEnrol').click(function () {
+                $.ajax({
+                    url: '/api/members/post',
+                    method: 'POST',
+                    data: {
+                        FirstName: $('#txtFName').val(),
+                        LastName: $('#txtLName').val(),
+                        Gender: $('#txtGender').val(),
+                        Age: $('#txtAge').val(),
+                        Mentorship: $('#txtMentorship').val(),
+                    },
+                    success: function () {
+                        $('#successModal').modal('show');
+                    },
+                    error: function (jqXHR) {
+                        $('#divErrorText').text(jqXHR.responseText);
+                        $('#divError').show('fade');
+                    }
+                });
+
+
+            });
+        });
+    </script>
+</body>
+</html>
