@@ -1,0 +1,60 @@
+﻿@model IEnumerable<MentorshipProgram.Models.Calculator>
+
+@{
+    ViewBag.Title = "Calculator Log";
+}
+
+<table class="table">
+    <tr>
+        <th>
+            FULL NAMES
+        </th>
+        <th>
+            USER NAME
+        </th>
+        <th>
+            FIRST NUMBER
+        </th>
+        <th>
+            OPERATION
+        </th>
+        <th>
+            SECOND NUMBER
+        </th>
+        <th>
+            RESULT
+        </th>
+        <th>
+            DATE PERFORMED
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.fullnames)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.number1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.operation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.number2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.total)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateCreated)
+            </td>
+        </tr>
+    }
+
+</table>

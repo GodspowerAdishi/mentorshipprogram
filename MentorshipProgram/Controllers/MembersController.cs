@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 
 namespace MentorshipProgram.Controllers
 {
-    
     public class MembersController : ApiController
 
     {
+        // Saves mentees on the database
         public void Post(Member member)
         {
             using (MemberDBContext entities = new MemberDBContext())
@@ -19,7 +16,10 @@ namespace MentorshipProgram.Controllers
                 entities.SaveChanges();
             }
         }
-        [Authorize]
+
+
+        // Gets enrolled mentees from the database
+        [System.Web.Http.Authorize]
         public IEnumerable<Member> Get()
         {
             using (MemberDBContext entities = new MemberDBContext())

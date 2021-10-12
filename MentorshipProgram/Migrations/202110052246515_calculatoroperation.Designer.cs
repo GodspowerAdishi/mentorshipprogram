@@ -7,13 +7,13 @@ namespace MentorshipProgram.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class CreateMember : IMigrationMetadata
+    public sealed partial class calculatoroperation : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(CreateMember));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(calculatoroperation));
         
         string IMigrationMetadata.Id
         {
-            get { return "202103040010065_CreateMember"; }
+            get { return "202110052246515_calculatoroperation"; }
         }
         
         string IMigrationMetadata.Source

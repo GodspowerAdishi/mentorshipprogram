@@ -5,14 +5,14 @@ namespace MentorshipProgram.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<MentorshipProgram.MemberDBContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<MentorshipProgram.CalculatorDBContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(MentorshipProgram.MemberDBContext context)
+        protected override void Seed(MentorshipProgram.CalculatorDBContext context)
         {
             //  This method will be called after migrating to the latest version.
 

@@ -70,21 +70,20 @@
                         password: $('#txtPassword').val(),
                         grant_type: 'password'
                     },
+
                     success: function (response) {
                         localStorage.setItem('accessToken', response.access_token);
                         localStorage.setItem('userName', response.userName);
                         window.location.href = "EnrolledMembers.html";
                     },
+
                     error: function (jqXHR) {
                         $('#divErrorText').text(jqXHR.responseText);
                         $('#divError').show('fade');
                     }
                 });
-
-
             });
         });
     </script>
 </body>
 </html>
-

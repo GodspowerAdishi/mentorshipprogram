@@ -72,8 +72,11 @@ c:\users\godspower\documents\visual studio 2015\Projects\MentorshipProgram\Mento
 c:\users\godspower\documents\visual studio 2015\Projects\MentorshipProgram\MentorshipProgram\bin\Microsoft.Owin.Security.Twitter.xml
 c:\users\godspower\documents\visual studio 2015\Projects\MentorshipProgram\MentorshipProgram\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 c:\users\godspower\documents\visual studio 2015\Projects\MentorshipProgram\MentorshipProgram\bin\System.Web.Http.Owin.xml
-c:\users\godspower\documents\visual studio 2015\Projects\MentorshipProgram\MentorshipProgram\obj\Debug\MentorshipProgram.csprojResolveAssemblyReference.cache
 c:\users\godspower\documents\visual studio 2015\Projects\MentorshipProgram\MentorshipProgram\obj\Debug\MentorshipProgram.dll
 c:\users\godspower\documents\visual studio 2015\Projects\MentorshipProgram\MentorshipProgram\obj\Debug\MentorshipProgram.pdb
-C:\Users\Godspower\documents\visual studio 2015\Projects\MentorshipProgram\MentorshipProgram\obj\Debug\MentorshipProgram.Migrations.CreateMember.resources
-C:\Users\Godspower\documents\visual studio 2015\Projects\MentorshipProgram\MentorshipProgram\obj\Debug\MentorshipProgram.csproj.GenerateResource.Cache
+C:\Users\Godspower\Documents\Visual Studio 2015\Projects\MentorshipProgram\MentorshipProgram\obj\Debug\MentorshipProgram.csprojAssemblyReference.cache
+C:\Users\Godspower\Documents\Visual Studio 2015\Projects\MentorshipProgram\MentorshipProgram\obj\Debug\MentorshipProgram.csproj.CoreCompileInputs.cache
+C:\Users\Godspower\Documents\Visual Studio 2015\Projects\MentorshipProgram\MentorshipProgram\obj\Debug\MentorshipProgram.csproj.CopyComplete
+C:\Users\Godspower\Documents\Visual Studio 2015\Projects\MentorshipProgram\MentorshipProgram\obj\Debug\MentorshipProgram.Migrations.createdtable.resources
+C:\Users\Godspower\Documents\Visual Studio 2015\Projects\MentorshipProgram\MentorshipProgram\obj\Debug\MentorshipProgram.csproj.GenerateResource.cache
+C:\Users\Godspower\Documents\Visual Studio 2015\Projects\MentorshipProgram\MentorshipProgram\obj\Debug\MentorshipProgram.Migrations.calculatoroperation.resources

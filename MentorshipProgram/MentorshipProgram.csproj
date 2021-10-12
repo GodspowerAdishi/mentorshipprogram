@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -206,7 +207,10 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="CalculatorDBContext.cs" />
+    <Compile Include="CalculatorRepository.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CalculatorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MembersController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
@@ -216,13 +220,19 @@
     <Compile Include="Member.cs" />
     <Compile Include="MemberDBContext.cs" />
     <Compile Include="MemberRepository.cs" />
-    <Compile Include="Migrations\202103040010065_CreateMember.cs" />
-    <Compile Include="Migrations\202103040010065_CreateMember.Designer.cs">
-      <DependentUpon>202103040010065_CreateMember.cs</DependentUpon>
+    <Compile Include="Migrations\202110010937504_createdtable.cs" />
+    <Compile Include="Migrations\202110010937504_createdtable.Designer.cs">
+      <DependentUpon>202110010937504_createdtable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110052246515_calculatoroperation.cs" />
+    <Compile Include="Migrations\202110052246515_calculatoroperation.Designer.cs">
+      <DependentUpon>202110052246515_calculatoroperation.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Calculator.cs" />
+    <Compile Include="Models\IdentityExtensions.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
@@ -286,12 +296,15 @@
     <Content Include="Scripts\_references.js" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Calculator\Calculator.cshtml" />
+    <Content Include="Views\Calculator\GetCalculator.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Claims\" />
+    <Folder Include="Views\Home\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -305,8 +318,11 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202103040010065_CreateMember.resx">
-      <DependentUpon>202103040010065_CreateMember.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202110010937504_createdtable.resx">
+      <DependentUpon>202110010937504_createdtable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110052246515_calculatoroperation.resx">
+      <DependentUpon>202110052246515_calculatoroperation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

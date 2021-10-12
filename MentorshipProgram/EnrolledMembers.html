@@ -8,9 +8,10 @@
 <body style="padding-top:20px">
     <div class="col-md-10 col-md-offset-1">
         <div class="well">
-
             <input type="button" id="btnLoadMembers" class="btn btn-success" value="Load Members" />
             <span id="spanUsername" class="text-muted"></span>
+            <input type="button" id="btnCalculator" class="btn btn-success" value="Calculator" />
+            <input type="button" id="btnGetCalculator" class="btn btn-success" value="Calculator Log" />
             <input type="button" id="btnLogoff" class="btn btn-success pull-right" value="Log Off" />
         </div>
 
@@ -58,11 +59,14 @@
         </div>
     </div>
 
+
     <script src="Scripts/jquery-1.10.2.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $('#spanUsername').text('Hello ' + localStorage.getItem('userName'));
+
+            $('#spanUsername').text('User: ' + localStorage.getItem('userName'));
+
             if (localStorage.getItem('accessToken') == null) {
                 window.location.href = "Login.html";
             }
@@ -71,6 +75,16 @@
                 localStorage.removeItem('accessToken');
                 window.location.href = "Login.html";
             });
+
+
+            $('#btnCalculator').click(function () {
+                window.location.href = "/Calculator/Calculator";
+            });
+
+            $('#btnGetCalculator').click(function () {
+                window.location.href = "/Calculator/Getcalculator";
+            });
+
 
             $('#errormodal').on('hidden.bs.modal', function () {
                 window.location.href = "Login.html";
@@ -110,11 +124,8 @@
                             $('#divErrorText').text(jqXHR.responseText);
                             $('#divError').show('fade');
                         }
-
                     }
                 });
-
-
             });
         });
     </script>

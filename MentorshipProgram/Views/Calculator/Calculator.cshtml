@@ -1,0 +1,45 @@
+﻿@model MentorshipProgram.Models.Calculator
+@{
+    ViewBag.Title = "Calculator";
+}
+
+<html>
+<head>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+
+<body>
+    <h2>Calculator</h2>
+    <span id="spanUsername" class="text-muted"></span>
+    <div class="row">
+        @using (Html.BeginForm("/Calculator", "Calculator", FormMethod.Post))
+        {
+            <div class="form-group">
+                <label for="number1">First Number</label>
+                <input type="text" class="form-control" id="number1" name="number1" value="@Model.number1" />
+            </div>
+
+
+            <div class="form-group">
+                <label for="number1">Second Number</label>
+                <input type="text" class="form-control" id="number2" name="number2" value="@Model.number2" />
+            </div>
+
+
+            <div class="form-group">
+                <label for="total">Result</label>
+                <input type="button" class="form-control" id="total" name="total" value="@Model.total" />
+            </div>
+
+            <button type="submit" class="btn btn-info" id="add" value="add" name="calculate">+</button>
+
+            <button type="submit" class="btn btn-danger" id="subtract" value="subtract" name="calculate">-</button>
+
+            <button type="submit" class="btn btn-warning" id="multiply" value="multiply" name="calculate">x</button>
+
+            <button type="submit" class="btn btn-success" id="divide" value="divide" name="calculate">/</button>
+        }
+    </div>
+</body>
+</html>

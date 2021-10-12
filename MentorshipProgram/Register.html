@@ -20,9 +20,21 @@
                 </thead>
 
 
-
-
                 <tbody>
+                    <tr>
+                        <td>First Name</td>
+                        <td>
+                            <input type="text" id="txtFirstName" placeholder="First Name" />
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Last Name</td>
+                        <td>
+                            <input type="text" id="txtLastName" placeholder="Last Name" />
+
+                        </td>
+                    </tr>
                     <tr>
                         <td>Email</td>
                         <td>
@@ -94,6 +106,8 @@
                     url: '/api/account/register',
                     method: 'POST',
                     data: {
+                        firstName: $('#txtFirstName').val(),
+                        lastName: $('#txtLastName').val(),
                         email: $('#txtEmail').val(),
                         password: $('#txtPassword').val(),
                         confirmPassword: $('#txtConfirmPassword').val(),
